@@ -1,0 +1,22 @@
+.category-header {
+    height: 35vh;
+    width: 100%;
+    background: url("../../../images/category-header.png") center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .my-breadcrumb,
+    .category-name {
+        color: white;
+        margin-left: 8rem;
+    }
+    .my-breadcrumb {
+        font-family: $Lato;
+    }
+    .category-name {
+        font-family: $Oswald;
+    }
+}
