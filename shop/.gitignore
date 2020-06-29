@@ -1,0 +1,8 @@
+.history
+.idea
+.DS_Store
+
+build_dev/
+build_prod/
+
+node_modules

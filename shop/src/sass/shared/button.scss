@@ -1,0 +1,14 @@
+.btn {
+    @media screen and (max-width: 568px) {
+        width: 100%;
+    }
+}
+
+.button-centered {
+    @media screen and (min-width: 568px) {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

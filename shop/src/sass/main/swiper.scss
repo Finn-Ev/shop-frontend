@@ -1,0 +1,17 @@
+:root {
+    --swiper-theme-color: white;
+}
+
+.swiper-slide {
+    img {
+        width: 100%;
+    }
+    .date {
+        letter-spacing: 1.25px;
+        display: block;
+    }
+
+    > a {
+        color: black;
+    }
+}

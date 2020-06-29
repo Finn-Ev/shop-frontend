@@ -1,0 +1,38 @@
+include ../mixins/mixins
+
+doctype html
+html(lang="de")
+    include ./../partials/html-head.pug
+
+    block bodyclass
+        - var classes = []
+        - if( env_dev ) classes.push('env-dev');
+
+    body(class=classes)
+
+        #js-mmenu-wrapper
+
+            .page-wrapper
+
+                include ./../partials/header.pug
+
+                main.main
+                    block content
+                        h1#title Lorem ipsum
+                        p dolor sit amet.
+
+                block footer_pre
+                    //-include ./../partials/eyecatcher
+                block footer
+                    include ./../partials/footer.pug
+                    
+            .d-none
+                block hidden
+
+            //inject:inline:js
+            //endinject
+
+            block footer_js
+                //script(src='js/all.js')
+
+            include ./../partials/html-foot.pug

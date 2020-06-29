@@ -1,0 +1,15 @@
+.sub-heading {
+    border-bottom: lightgrey 3px solid;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.rotate {
+    @media screen and (min-width: 992px) {
+        transform: rotate(-90deg);
+        position: absolute;
+        left: -50px;
+    }
+}

@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 170%;
+}
+
+@import "./partials/utils.scss";
+
+@import "./partials/header";
+
+@import "./partials/mmenu.config.scss";
+
+@import "./partials/image-heading";
+
+@import "./partials/introduction";
+
+@import "./partials/brand.scss";
+
+@import "./partials/career";
+
+@import "./partials/video-section.scss";
+
+@import "./partials/sustainability";
+
+@import "./partials/footer.scss";

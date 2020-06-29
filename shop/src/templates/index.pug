@@ -1,0 +1,143 @@
+extends ./layouts/main.pug
+
+block title
+    | Boilerplate
+
+block content
+    .container-fluid
+       .image-heading-wrapper
+                .image-heading
+                    h2 bugatti - das Unternehmen.
+    .container.mt-2.mb-3.position-relative
+         .row
+            .col-24.col-md-16.offset-md-4.mt-lg-4
+                p.sub-heading.rotate.mt-4 DIE MARKE
+                h5.introduction-heading Unsere Story - <br/> We are europe
+                p.introduction-text Europa bedeutet kulturelle und kreative Vielfalt. London, Paris, Mailand – drei der wichtigsten Modemetropolen der Welt sind hier zuhause. Auch die Marke bugatti hat ihren Ursprung in Europa und schöpft ihre Inspiration aus dessen Reichtum
+                a(href="/").introduction-link Mehr erfahren...
+    
+    .container.position-relative
+        .row.justify-content-center   
+            .col-24.col-md-11.mb-4
+                .signette-light
+                    img.w-100.lazy(data-src="images/desktop/jacke-blau.png")
+            .col-24.col-md-13.mb-4
+                img.w-100.lazy(data-src="images/desktop/jacke-rot.jpg")
+            
+        .row
+            .col-24
+                button.btn.btn-outline-primary.button-desktop.brand-button MARKE ENTDECKEN 
+                    i.fas.fa-long-arrow-alt-right
+    
+    .container
+        h1.statement Feel good, <br/> look good.
+    
+    .container
+        .row.career
+            .career-left.col-24.col-md-12
+                img.w-100.my-3(src="images/desktop/mitarbeiter.jpg", alt="")
+                h4.font-weight-bold Ausbildung - Wissen, Erfahrung, Persönlichkeit
+                button.btn.btn-outline-primary.mt-2 KARRIEREBEREICH  
+                    i.fas.fa-long-arrow-alt-right
+            .career-right.col-24.col-md-12  
+                p.sub-heading.mt-4 KARRIERE
+                h2.career-header-mobile.font-weight-bold.d-md-none Werden sie Teil unseres Teams
+                h1.career-header-desktop.font-weight-bold.hide-on-mobile Arbeiten bei bugatti <br> Werden sie Teil unseres Teams
+                p Unser Markenportefeuille genießt internationales Ansehen und hohe Bekanntheit im Handel und bei Verbrauchern. Festigung und weiterer Ausbau unserer Marktposition erfordern Einsatzfreude und hohe Leistungsbereitschaft aller Mitarbeiter. Qualifikation, Teamfähigkeit, Kreativität und nicht zuletzt menschliche Qualitäten befähigen uns, gemeinsam Visionen zu entwickeln, Ziele zu definieren und zu erreichen. Fühlen Sie sich angesprochen, bei uns mitzuarbeiten?
+                a.text-dark.mb-5(href="/") STELLENANGBOTE
+                img.w-100.hide-on-tablet.my-md-5(src="images/desktop/mitarbeiter-2.jpg", alt="")
+
+    .container-fluid.position-relative
+        .container.position-relative
+            h2.font-weight-bold.video-heading.mt-5 
+                span.
+                    From Berlin <br> to Budapest.           
+            
+        <a class="play-button" href="https://www.youtube.com/watch?v=_EyZUTDAH0U" data-fancybox data-caption="BUTTERFLY EFFECT by Travis Scott">
+           picture
+                source(srcset="images/desktop/video-thumbnail.png", media="(min-width: 576px")
+                img.w-100(src="images/mobile/video-thumbnail-mobile.png")
+        </a>
+        button.btn.btn-outline-primary.button-centered.mt-5 SEE CAMPAIGN 
+            i.fas.fa-long-arrow-alt-right 
+
+
+    .container.sustainablity.position-relative
+        .row
+            .col-24.col-md-16
+                img.w-100(src="images/desktop/green-future.jpg", alt="")
+            .col-24.col-md-8
+                div
+                    p.sub-heading.mt-5 NACHHALTIGKEIT
+                h3.font-weight-bold.my-mb-3  We’re taking bugatti towards a greener future
+                div
+                    button.btn.btn-outline-primary.hide-on-mobile.my-md-3 UNSER VERSPRECHEN 
+                        i.fas.fa-long-arrow-alt-right
+                img.w-100.mt-md-2(src="images/desktop/green-future-2.jpg", alt="")
+
+        button.btn.btn-outline-primary.d-md-none.mt-3 UNSER VERSPRECHEN 
+            i.fas.fa-long-arrow-alt-right
+
+    .container-fluid.bg-light.py-5.mt-5
+        .container.position-relative.pb-5
+            p.sub-heading.mt-4 NEUIGKEITEN
+            h3.font-weight-bold.mb-3  bugatti Newsroom - Let’s talk details
+            .swiper-container
+                .swiper-wrapper 
+                    .swiper-slide 
+                        img.mb-2(src="images/desktop/slider-image-1.jpg", alt="")
+                        span.date.font-weight-bolder 10. JULI 2019
+                        p.font-weight-bolder bugatti Jacken - Sonne statt Daunen
+                        a.text-black(href="/") ZUM ARTIKEL
+                    .swiper-slide
+                        img.mb-2(src="images/desktop/slider-image-2.jpg", alt="")
+                        span.date.font-weight-bolder 10. JULI 2019
+                        p.font-weight-bolder bugatti Jacken - Sonne statt Daunen
+                        a.text-black(href="/") ZUM ARTIKEL
+                    .swiper-slide
+                        img.mb-2(src="images/desktop/slider-image-2.jpg", alt="")
+                        span.date.font-weight-bolder 10. JULI 2019
+                        p.font-weight-bolder bugatti women - Fake Fur, Farbe und geniale Muster
+                        a.text-black(href="/") ZUM ARTIKEL
+                    .swiper-slide
+                        img.mb-2(src="images/desktop/slider-image-2.jpg", alt="")
+                        span.date.font-weight-bolder 10. JULI 2019
+                        p.font-weight-bolder bugatti women - Fake Fur, Farbe und geniale Muster
+                        a.text-black(href="/") ZUM ARTIKEL
+                    .swiper-slide
+                        img.mb-2(src="images/desktop/slider-image-2.jpg", alt="")
+                        span.date.font-weight-bolder 10. JULI 2019
+                        p.font-weight-bolder bugatti women - Fake Fur, Farbe und geniale Muster
+                        a.text-black(href="/") ZUM ARTIKEL
+                    .swiper-slide
+                        img.mb-2(src="images/desktop/slider-image-2.jpg", alt="")
+                        span.date.font-weight-bolder 10. JULI 2019
+                        p.font-weight-bolder bugatti women - Fake Fur, Farbe und geniale Muster
+                        a.text-black(href="/") ZUM ARTIKEL
+                    .swiper-slide
+                        img.mb-2(src="images/desktop/slider-image-2.jpg", alt="")
+                        span.date.font-weight-bolder 10. JULI 2019
+                        p.font-weight-bolder bugatti women - Fake Fur, Farbe und geniale Muster
+                        a.text-black(href="/") ZUM ARTIKEL
+                    .swiper-slide.d-none Slide 4
+                    .swiper-slide.d-none Slide 5
+                .swiper-button-next
+                .swiper-button-prev    
+            button.btn.btn-primary.button-centered.mt-3.mt-md-0 ZUM PRESSEPORTAL 
+                i.fas.fa-long-arrow-alt-right
+
+    .container.position-relative  
+        .row
+            .col-24.col-md-16.offset-md-4.mt-lg-5
+                p.sub-heading.rotate.mt-4 PARTNER
+                h3.font-weight-bold Unsere Lizenzpartner
+                p 14 Lizenzpartner runden mit Ihren Produkten das bugatti Sortiment ab, der Mann kann sich von Kopf bis Fuß, in Freizeit und Business in bugatti einkleiden, und auch für's "zu Hause" gibt’s die richtige Ausstattung.
+                button.btn.btn-outline-primary MEHR ERFAHREN 
+                    i.fas.fa-long-arrow-alt-right
+    
+    .container.mt-4
+        .row
+            .col-24.col-md-12
+                img.w-100(src="images/desktop/store-1.jpg")
+            .col-24.col-md-12.mt-3.mt-md-0
+                img.w-100(src="images/desktop/store-2.jpg")

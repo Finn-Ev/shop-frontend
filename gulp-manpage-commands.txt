@@ -1,0 +1,137 @@
+LEONEX Gulpfile v1.9.0
+
+NAME
+    gulp help
+
+SYNOPSIS
+    gulp help
+
+DESCRIPTION
+    Zeigt diese Hilfe an.
+
+
+
+
+NAME
+    gulp build
+
+SYNOPSIS
+    gulp build [--production] [--frontend NAME] [--no-images] [--no-linting]
+
+DESCRIPTION
+    Dieser Task builded ein oder mehrere Frontend(s).
+    Frontends müssen eine Konfigurationsdatei besitzen, d.h. jeweils
+    die Datei 'gulp.frontend.NAME.json' im Root-Ordner des Projektes.
+
+OPTIONS
+    --production
+        JS/CSS minifizieren, keine Sourcemaps erzeugen, Bilder optimieren.
+        Unterschiedliche Output-Ordner für Production und Development sind möglich,
+        dies wird in den Frontend-Konfigurationsdateien definiert.
+
+    --frontend NAME
+        Nur das Frontend mit Bezeichnung NAME builden.
+        Dabei kann NAME auch eine kommaseparierte Liste von Bezeichnern sein.
+        Falls frontend nicht angegeben wird, werden alle verfügbaren Frontends gebuilded.
+
+    --no-images
+        Es werden keine Bilder optimiert (--production) bzw. kopiert (ohne --production).
+        Insbesondere das optimieren kann sehr lange dauern und daher stören, falls
+        man keine Änderungen an Bildern im Frontend vorgenommen hat.
+
+    --no-linting
+        Es wird kein Linting der JS-Sources durchgeführt (not recommended).
+
+
+
+
+NAME
+    gulp copy
+
+SYNOPSIS
+    gulp copy [--development / --no-production] [--target NAME] [--no-images] [--linting]
+
+DESCRIPTION
+    Dieser Task führt die in den Target-Konfigurationsdateien definierten Kopiervorgänge
+    aus. Dazu werden zuerst alle benötigten Frontends gebuilded und anschließend die
+    entsprechenden Dateien aus den Output-Ordnern der Frontends in die Target-Ordner
+    kopiert.
+
+OPTIONS
+    --development
+    --no-production
+        JS/CSS nicht minifizieren, Sourcemaps erzeugen, Bilder nicht optimieren.
+
+    --target NAME
+        Nur die Kopiervorgänge für Target NAME ausführen ('gulp.target.NAME.json').
+        Dabei kann NAME auch eine kommaseparierte Liste von Bezeichnern sein.
+        Falls target nicht angegeben wird (oder 'all' als NAME übergeben wird),
+        werden die Kopiervorgänge aller verfügbaren Targets durchgeführt.
+
+    --no-images
+        Dieser Parameter hat ausschließlich Einfluss auf die Build-Vorgänge der
+        benötigten Frontends, und nicht auf die Kopiervorgänge aus den Target-
+        Konfigurationen.
+        Siehe Beschreibung der Eigenschaft '--no-images' bei 'gulp build'.
+
+    --linting
+        Der Copy-Task führt standardmäßig kein Linting aus, dies muss explizit
+        per Paramater erzwungen werden.
+        Dieser Parameter hat ausschließlich Einfluss auf die Build-Vorgänge der
+        benötigten Frontends, und nicht auf die Kopiervorgänge aus den Target-
+        Konfigurationen.
+        Siehe Beschreibung der Eigenschaft '--no-linting' bei 'gulp build'.
+
+
+
+
+NAME
+    gulp watch
+
+SYNOPSIS
+    gulp watch [--production] [--frontend FNAME] [--target TNAME] [--no-images] [--no-linting]
+
+DESCRIPTION
+    Dieser Task überwacht Änderungen an Frontend-Dateien und führt dem Dateityp
+    entsprechende Build-Tasks aus.
+    Zusätzlich läuft während der Laufzeit dieses Tasks ein Webserver, der einzelne
+    oder alle Frontends ausliefert (Standard-URL: http://localhost:3000, siehe Ausgabe).
+    Seiten, die über den Webserver aufgerufen werden, unterstützen auto-refresh bei
+    Änderungen von Source-Dateien (via BrowserSync).
+    Durch die Angabe von Targets ist auch das anschließende automatisierte Kopieren
+    von kompilierten Frontend-Dateien an entsprechend definierte Orte in Target-Ordnern
+    möglich.
+
+OPTIONS
+    --production
+        JS/CSS minifizieren, keine Sourcemaps erzeugen, Bilder optimieren.
+        Beeinflusst ebenfalls die vom Webserver ausgelieferte Frontend-Version.
+
+    --frontend FNAME
+        Nur das angegebene Frontend überwachen (bzw. die angegebenen Frontends bei
+        einer kommaseparierten Liste).
+        Falls FNAME ein einzelner Frontend-Bezeichner ist, liefert der Webserver direkt
+        und ausschließlich dieses Frontend aus.
+
+    --target TNAME
+        Kann nur verwendet werden, falls parameter '--frontend' nicht verwendet wird.
+        Die Angabe eines Targets sorgt für einen dritten Schritt, der nach
+        "1. Änderungen überwachen" und "2. Builden bei Änderungen" erfolgt:
+        Das Ausführen der in den Target-Konfigurationsdateien definierten Kopiervorgänge.
+        (So können z.B. Javascript-Änderungen im Frontend direkt im CMS/Shopsystem
+        getestet werden.)
+        Bei Verwendung dieses Parameters werden nur die Frontends überwacht, welche für
+        Kopiervorgänge des Targets TNAME erforderlich sind.
+        TNAME kann auch eine kommaseparierte Liste von Bezeichnern sein.
+
+    --no-images
+        Dieser Parameter hat ausschließlich Einfluss auf die Build-Vorgänge der
+        benötigten Frontends, und nicht auf die Kopiervorgänge aus den Target-
+        Konfigurationen.
+        Siehe Beschreibung der Eigenschaft '--no-images' bei 'gulp build'.
+
+    --no-linting
+        Dieser Parameter hat ausschließlich Einfluss auf die Build-Vorgänge der
+        benötigten Frontends, und nicht auf die Kopiervorgänge aus den Target-
+        Konfigurationen.
+        Siehe Beschreibung der Eigenschaft '--no-linting' bei 'gulp build'.

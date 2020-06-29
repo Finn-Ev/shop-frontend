@@ -1,0 +1,10 @@
+.hide-on-mobile {
+    @media screen and(max-width: 576px) {
+        display: none;
+    }
+}
+.hide-on-tablet {
+    @media screen and(max-width: 992px) {
+        display: none;
+    }
+}

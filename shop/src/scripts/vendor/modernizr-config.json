@@ -1,0 +1,32 @@
+{
+  "minify": true,
+  "classPrefix": "mdnzr-",
+  "options": [
+    "domPrefixes",
+    "prefixes",
+    "addTest",
+    "atRule",
+    "hasEvent",
+    "mq",
+    "prefixed",
+    "prefixedCSS",
+    "prefixedCSSValue",
+    "testAllProps",
+    "testProp",
+    "testStyles",
+    "html5shiv",
+    "setClasses"
+  ],
+  "feature-detects": [
+    "test/video",
+    "test/css/animations",
+    "test/css/backgroundsizecover",
+    "test/css/flexbox",
+    "test/css/gradients",
+    "test/css/positionsticky",
+    "test/css/remunit",
+    "test/css/transforms",
+    "test/css/transitions",
+    "test/window/matchmedia"
+  ]
+}

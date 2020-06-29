@@ -1,0 +1,25 @@
+include ../mixins/mixins
+
+doctype html
+html
+    include ./../partials/html-head.pug
+
+    block bodyclass
+        - var classes = []
+        - if( env_dev ) classes.push('env-dev');
+
+    body(class=classes)
+        .page-wrapper.pt-0
+            block content
+                h1#title Lorem ipsum
+                p dolor sit amet.
+
+
+
+        //inject:inline:js
+        //endinject
+
+        block footer_js
+            //script(src='js/all.js')
+
+        include ./../partials/html-foot.pug

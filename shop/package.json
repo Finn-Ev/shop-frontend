@@ -1,0 +1,17 @@
+{
+  "name": "bugatti-corporate",
+  "version": "1.0.0",
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.3.5",
+    "bootstrap": "^4.1.2",
+    "fastclick": "^1.0.6",
+    "headroom.js": "^0.9.4",
+    "jquery": "^3.3.1",
+    "jquery.mmenu": "^7.2.0",
+    "js-offcanvas": "^1.2.9",
+    "popper.js": "^1.14.3",
+    "requirejs": "^2.3.6",
+    "swiper": "^5.2.0",
+    "vanilla-lazyload": "12.0.0"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "active": true,
+  "css_preprocessor": "sass",
+  "js_inline": true,
+  "folders": {
+    "basedir": "./shop"
+  },
+  "vendor_js_concatenation": [
+    {
+      "output": "js/vendor.js",
+      "files": [
+        "modernizr-custom.js",
+        "jquery/dist/jquery.js",
+        "popper.js/dist/umd/popper.js",
+        "@fancyapps/fancybox/dist/jquery.fancybox.js",
+        "fastclick/lib/fastclick.js",
+        "vanilla-lazyload/dist/lazyload.js",
+        "jquery.mmenu/dist/jquery.mmenu.all.js",
+        "swiper/js/swiper.js",
+        "jquery.scrollto/jquery.scrollTo.js",
+        "jQuery-menu-aim/jquery.menu-aim.js",
+        "headroom.js/dist/jQuery.headroom.js"
+      ]
+    }
+  ]
+}

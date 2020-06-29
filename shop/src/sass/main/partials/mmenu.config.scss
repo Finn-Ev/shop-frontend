@@ -1,0 +1,33 @@
+.mm-listitem__text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black !important;
+}
+
+.mm-panel,
+.mm-navbar,
+.mm-navbars-top,
+.mm-btn {
+    background: white !important ;
+    border: none !important;
+    color: black !important;
+}
+
+.navbar-close {
+    text-align: start !important;
+    margin-left: 10px;
+    font-size: 30px;
+    color: black;
+}
+
+// .mm-panels {
+//     position: relative;
+// }
+// .mm-panel {
+//     position: absolute !important;
+//     top: -50px;
+// }
+
+.navbar-title {
+    max-width: 200px;
+    margin-bottom: 10px;
+}
