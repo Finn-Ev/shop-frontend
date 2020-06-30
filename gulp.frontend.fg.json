@@ -19,7 +19,8 @@
         "swiper/js/swiper.js",
         "jquery.scrollto/jquery.scrollTo.js",
         "jQuery-menu-aim/jquery.menu-aim.js",
-        "headroom.js/dist/jQuery.headroom.js"
+        "headroom.js/dist/jQuery.headroom.js",
+        "jquery-match-height/dist/jquery.matchHeight.js"
       ]
     }
   ]

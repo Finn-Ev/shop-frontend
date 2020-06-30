@@ -12,7 +12,7 @@ block content
     .container              
         section.filter-header.mt-4
             span Filtern nach:
-            div
+            div.sort-by
                 span Sortieren nach:&nbsp;
                 button.btn.btn-outline-primary Neu im Shop &nbsp;
                     i.fas.fa-chevron-down
@@ -36,21 +36,21 @@ block content
             .row.justify-content-between
                 include ./partials/product.pug
                 include ./partials/product.pug
+                include ./partials/product-2.pug
+                include ./partials/product.pug
+                include ./partials/product-2.pug
+                include ./partials/product.pug
+                include ./partials/newsletter-tile.pug
+                include ./partials/product.pug
+                include ./partials/product.pug
+                include ./partials/product.pug
+                include ./partials/product-2.pug
                 include ./partials/product.pug
                 include ./partials/product.pug
                 include ./partials/product.pug
                 include ./partials/product.pug
                 include ./partials/product.pug
-                include ./partials/product.pug
-                include ./partials/product.pug
-                include ./partials/product.pug
-                include ./partials/product.pug
-                include ./partials/product.pug
-                include ./partials/product.pug
-                include ./partials/product.pug
-                include ./partials/product.pug
-                include ./partials/product.pug
-                include ./partials/product.pug
+                include ./partials/product-2.pug
                 include ./partials/product.pug
                 include ./partials/product.pug
                 include ./partials/product.pug
@@ -59,22 +59,22 @@ block content
                 include ./partials/product.pug
                 include ./partials/product.pug
         
-        section.swiper-container.mt-5
+        section.swiper-container.my-5
             .swiper-wrapper 
-                .swiper-slide 
-                        include ./partials/product.pug
+                .swiper-slide.swiper-product 
+                        include ./partials/swiper-product.pug
                 .swiper-slide
-                        include ./partials/product.pug
+                        include ./partials/swiper-product.pug
                 .swiper-slide
-                        include ./partials/product.pug
+                        include ./partials/swiper-product.pug
                 .swiper-slide
-                        include ./partials/product.pug
+                        include ./partials/swiper-product.pug
                 .swiper-slide
-                        include ./partials/product.pug
+                        include ./partials/swiper-product.pug
                 .swiper-slide
-                        include ./partials/product.pug
+                        include ./partials/swiper-product.pug
                 .swiper-slide
-                        include ./partials/product.pug
+                        include ./partials/swiper-product.pug
                     
             .swiper-button-next
             .swiper-button-prev    

@@ -1,5 +1,13 @@
 .filter-options {
-    button {
+    display: flex;
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+
+        .btn {
+            margin-bottom: 10px;
+        }
+    }
+    .btn {
         margin-right: 10px;
     }
     .btn-light {

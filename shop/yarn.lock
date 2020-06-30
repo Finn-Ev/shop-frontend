@@ -29,6 +29,11 @@ headroom.js@^0.9.4:
   resolved "https://registry.yarnpkg.com/headroom.js/-/headroom.js-0.9.4.tgz#0c4e6b4563bb69df55aecdefaba3227566f2df5a"
   integrity sha1-DE5rRWO7ad9Vrs3vq6MidWby31o=
 
+jquery-match-height@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/jquery-match-height/-/jquery-match-height-0.7.2.tgz#f8d9f3ba5314daab109cf07408674be204be5f0e"
+  integrity sha1-+NnzulMU2qsQnPB0CGdL4gS+Xw4=
+
 jquery.mmenu@^7.2.0:
   version "7.3.3"
   resolved "https://registry.yarnpkg.com/jquery.mmenu/-/jquery.mmenu-7.3.3.tgz#e870af2c650b00792359361165cc66b2943d6f60"

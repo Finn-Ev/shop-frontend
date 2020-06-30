@@ -19,6 +19,9 @@
     }
     .my-breadcrumb {
         font-family: $Lato;
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
     }
     .category-name {
         font-family: $Oswald;

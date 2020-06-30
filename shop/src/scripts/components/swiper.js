@@ -1,6 +1,6 @@
 require(["jquery", "swiper"], function ($, Swiper) {
     jQuery(function ($) {
-        var swiper = new Swiper(".swiper-container", {
+        var productPageSwiper = new Swiper(".swiper-container", {
             slidesPerView: 2,
             breakpoints: {
                 320: {
@@ -21,5 +21,26 @@ require(["jquery", "swiper"], function ($, Swiper) {
                 prevEl: ".swiper-button-prev",
             },
         });
+
+        var productDetailsSideSwiper = new Swiper(".side-swiper", {
+            direction: "vertical",
+            slidesPerView: 1,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        var productDetailsMainSwiper = new Swiper(".main-swiper", {
+            slidesPerView: 1,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+        productDetailsSideSwiper.params.control =
+            productDetailsMainSwiper.params.control;
+        productDetailsMainSwiper.params.control =
+            productDetailsSideSwiper.params.control;
     });
 });

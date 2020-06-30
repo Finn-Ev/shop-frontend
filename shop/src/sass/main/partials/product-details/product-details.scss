@@ -1,0 +1,79 @@
+.product-details {
+    .product-name {
+        font-family: $Lato;
+        font-weight: bold;
+    }
+    .row span {
+        font-size: 0.9rem;
+        color: grey;
+    }
+    .quick-links {
+        border-top: lightgrey 1px solid;
+        border-bottom: lightgrey 1px solid;
+        padding: 10px 0;
+        .col-18 {
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            a {
+                font-weight: 500;
+            }
+        }
+    }
+    .select-type {
+        .dropdown-toggle {
+            width: 100%;
+            button {
+                margin: 0;
+            }
+        }
+    }
+    .price-area {
+        border-bottom: 1px solid lightgrey;
+        padding-bottom: 10px;
+        .price {
+            font-family: $Oswald;
+        }
+        .taxes {
+            font-family: $Merriweather;
+        }
+        .delivery-info {
+            color: rgb(44, 209, 44);
+            font-family: $Lato;
+        }
+    }
+    .cart-area {
+        margin-top: 2rem;
+        .add-to-cart {
+            padding: 15px 7.5px;
+            background: #e75862;
+            color: white;
+        }
+    }
+    .good-to-know {
+        width: 100%;
+
+        margin-bottom: 2rem;
+        span {
+            margin-top: 10px;
+            font-family: $Lato;
+        }
+        .fa-check {
+            color: rgb(189, 12, 12);
+        }
+    }
+    .others {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid lightgrey;
+        border-bottom: 1px solid lightgrey;
+        padding: 12.5px 0;
+
+        span {
+            font-family: $Lato;
+            margin-right: 2rem;
+        }
+    }
+}

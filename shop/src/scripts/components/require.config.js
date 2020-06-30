@@ -13,6 +13,7 @@ requirejs.config({
         headroom: "vendor/headroom.js/dist/headroom",
         lazyload: "vendor/vanilla-lazyload/dist/lazyload.amd",
         leonex_fancybox: "vendor/@fancyapps/fancybox/dist/jquery.fancybox",
+        matchHeight: "vendor/jquery-match-height/dist/jquery.matchHeight",
     },
     shim: {
         menuAim: {
@@ -23,6 +24,9 @@ requirejs.config({
             exports: "mmenu",
         },
         leonex_fancybox: {
+            deps: ["jquery"],
+        },
+        matchHeight: {
             deps: ["jquery"],
         },
     },

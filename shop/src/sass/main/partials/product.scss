@@ -1,19 +1,74 @@
+.product-wrapper {
+    overflow: hidden;
+    height: auto;
+    //height: 410px;
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        width: auto;
+        left: 15px;
+        right: 15px;
+        bottom: 0;
+        border-bottom: 1px solid lightgrey;
+    }
+}
+
+.product-name {
+    font-family: "Lato", sans-serif;
+}
+
+.product-price {
+    font-family: "Oswald", sans-serif;
+}
+
+.delivery-time {
+    color: rgb(72, 185, 72);
+    font-size: 12px;
+}
+.product-name,
+.product-price,
+.delivery-time {
+    display: block;
+}
+
 .product {
-    .product-name,
-    .product-price,
-    .delivery-time {
-        display: block;
+    position: relative;
+
+    .product-info {
+        background: white;
+        width: 100%;
+
+        .more-pictures {
+            display: none;
+            margin-top: 10px;
+            position: relative;
+            height: 60px;
+            width: 100%;
+            .preview-image,
+            .fa-plus {
+                width: 18.75%;
+                margin-right: 1.25%;
+            }
+            .fa-plus {
+                text-align: center;
+                color: red;
+            }
+        }
     }
 
-    .product-name {
-        font-family: "Lato", sans-serif;
-    }
-
-    .product-price {
-        font-family: "Oswald", sans-serif;
-    }
-
-    .delivery-time {
-        color: rgb(72, 185, 72);
+    &:hover {
+        @include media-breakpoint-up(sm) {
+            cursor: pointer;
+            .product-info {
+                padding-top: 5px;
+                position: absolute;
+                transform: translateY(-60px);
+                transition: transform 0.3s ease-out;
+                .more-pictures {
+                    display: block;
+                }
+            }
+        }
     }
 }
