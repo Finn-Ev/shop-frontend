@@ -6,65 +6,90 @@ block title
 block content
     .container
         .row.mt-5
-            .col-24.col-md-12.product-images.row.px-5
-                .col-4.side-swiper
-                    .swiper-wrapper
-                        img.swiper-slide.w-100(src="images/detail-page-1.jpg", alt="")
-                        img.swiper-slide.w-100(src="images/detail-page-2.png", alt="")
-                        img.swiper-slide.w-100(src="images/detail-page-3.png", alt="")
-                        img.swiper-slide.w-100(src="images/detail-page-1.jpg", alt="")
-                        img.swiper-slide.w-100(src="images/detail-page-2.png", alt="")
-                        img.swiper-slide.w-100(src="images/detail-page-3.png", alt="")
+            .col-24.col-md-12
+                .row.product-images
+                    .col-24.col-sm-4.col-md-24.col-lg-4
+                        .side-swiper
+                            .swiper-wrapper
+                                .swiper-slide
+                                    img.w-100(src="images/detail-page-1.jpg", alt="")
+                                .swiper-slide
+                                    img.w-100(src="images/detail-page-2.png", alt="")
+                                .swiper-slide
+                                    img.w-100(src="images/detail-page-3.png", alt="")
+                                .swiper-slide
+                                    img.w-100(src="images/detail-page-1.jpg", alt="")
+                                .swiper-slide
+                                    img.w-100(src="images/detail-page-2.png", alt="")
+                                .swiper-slide
+                                    img.w-100(src="images/detail-page-3.png", alt="")
                         
-                    .swiper-button-next
-                    .swiper-button-prev 
-                .col-20.main-swiper 
-                    .swiper-wrapper
-                        img.swiper-slide.w-100(src="images/detail-page-1.jpg", alt="")
-                        img.swiper-slide.w-100(src="images/detail-page-2.png", alt="")
-                        img.swiper-slide.w-100(src="images/detail-page-3.png", alt="")
-                        img.swiper-slide.w-100(src="images/detail-page-1.jpg", alt="")
-                        img.swiper-slide.w-100(src="images/detail-page-2.png", alt="")
-                        img.swiper-slide.w-100(src="images/detail-page-3.png", alt="")
-        
-                    .swiper-button-next
-                    .swiper-button-prev 
+                        i.fas.fa-arrow-up.side-swiper-control-prev.swiper-control 
+                        i.fas.fa-arrow-down.side-swiper-control-next.swiper-control 
+                    .col-24.col-sm-19.col-md-24.col-lg-19
+                        .main-swiper 
+                            .swiper-wrapper
+                                .swiper-slide
+                                    img.w-100(src="images/detail-page-1.jpg", alt="")
+                                .swiper-slide
+                                    img.w-100(src="images/detail-page-2.png", alt="")
+                                .swiper-slide
+                                    img.w-100(src="images/detail-page-3.png", alt="")
+                                .swiper-slide
+                                    img.w-100(src="images/detail-page-1.jpg", alt="")
+                                .swiper-slide
+                                    img.w-100(src="images/detail-page-2.png", alt="")
+                                .swiper-slide
+                                    img.w-100(src="images/detail-page-3.png", alt="")
+            
+                        i.fas.fa-arrow-left.main-swiper-control-prev.swiper-control 
+                        i.fas.fa-arrow-right.main-swiper-control-next.swiper-control
+                        .badge NEU  
                 
-            .col-24.col-md-12.product-details.px-4
+            .col-24.col-md-12.product-details.px-5.px-md-3
                 h4.product-name.mb-3 Kesseböhmer LeMans II Eckschrank Beschlag anthrazit 450, 500 oder 600 mm Links / Rechts
-                .row.quick-links
-                    span.col-6(style="padding: 0") Direkt zu
-                    .col-18(style="padding: 0")
-                        a(href="/") Produktbeschreibung
-                        a(href="/") Montage
-                        a(href="/") Rezensionen
-                        i.fas.fa-clipboard-list
-                .row.select-type.align-items-center.mt-4
-                    span.col-6(style="padding: 0") Ausführung
-                    .dropdown.col-18(style="padding: 0")
-                        button.btn.btn-light.dropdown-toggle(type="button", id="dropdownMenuButton", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Bitte Auswählen
-                        .dropdown-menu(aria-labelledby="dropdownMenuButton")
-                            a.dropdown-item(href="/") test
-                            a.dropdown-item(href="/") test
-                            a.dropdown-item(href="/") test
+                
+                .quick-links
+                    .row
+                        span.col-4 Direkt zu
+                        .col-20
+                            a(href="/") Produktbeschreibung
+                            a(href="/") Montage
+                            a(href="/") Rezensionen
+                            i.fas.fa-clipboard-list
+
+                .select-type.mt-4
+                    .row
+                        span.col-4 Ausführung
+                        .dropdown.col-20
+                            button.btn.btn-light.dropdown-toggle(type="button", id="dropdownMenuButton", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Bitte Auswählen
+                            .dropdown-menu(aria-labelledby="dropdownMenuButton")
+                                a.dropdown-item(href="/") test
+                                a.dropdown-item(href="/") test
+                                a.dropdown-item(href="/") test
                     
-                .row.price-area.mt-4
-                    .col-18.offset-6(style="padding: 0")
-                        h1.price ab 288,06 EUR
-                        p.taxes inkl. 19% MwSt. zzgl. Versand
-                        p.delivery-info Sofort versandfertig, 1-3 Werktage
+                .price-area.mt-4
+                    .row  
+                        .col-20.offset-4
+                            h1.price ab 288,06 EUR
+                            p.taxes inkl. 19% MwSt. zzgl. Versand
+                            p.delivery-info Sofort versandfertig, 1-3 Werktage
                 
-                .row.cart-area
-                    input.col-4(type="number", placeholder="1") 
-                    <button class="col-18 offset-2 btn add-to-cart"> <i class="fas fa-shopping-cart"></i>&nbsp;In den Warenkorb  </button>
+                .cart-area
+                    .row
+                        .col-2
+                            input.quantity(type="number", placeholder="1", min="1") 
+                        .col-20.offset-2
+                            <button class="btn add-to-cart btn-block"> <i class="fas fa-shopping-cart"></i>&nbsp;In den Warenkorb  </button>
                 
-                .row.good-to-know.justify-content-between.mt-4
+                .good-to-know.mt-4
+                   
                     <span class="col-10" style="padding: 0"> <i class="fas fa-check"></i>&nbsp;&nbsp; Versandkostenfrei ab 50€</span>
                     <span class="col-10" style="padding: 0"> <i class="fas fa-check"></i>&nbsp;&nbsp; Sicherer Bestellprozess (SSL)</span>
                     <span class="col-10" style="padding: 0"> <i class="fas fa-check"></i>&nbsp;&nbsp; Kostenlose Fachberatung</span>
                     <span class="col-10" style="padding: 0"> <i class="fas fa-check"></i>&nbsp;&nbsp; Trusted Shops zertifiziert</span>
 
-                .row.others
+                .others
                     .product-ids
                         span Artikel-Nr.: 60826107
                         span Angebots-Nr.: 60826106

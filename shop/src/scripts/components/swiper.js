@@ -23,24 +23,40 @@ require(["jquery", "swiper"], function ($, Swiper) {
         });
 
         var productDetailsSideSwiper = new Swiper(".side-swiper", {
-            direction: "vertical",
-            slidesPerView: 1,
+            direction: "horizontal",
+            slidesPerView: "3",
+            spaceBetween: 10,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: ".side-swiper-control-next",
+                prevEl: ".side-swiper-control-prev",
+            },
+            breakpoints: {
+                576: {
+                    direction: "vertical",
+                    slidesPerView: "4",
+                },
+                768: {
+                    direction: "horizontal",
+                    slidesPerView: "3",
+                },
+                992: {
+                    direction: "vertical",
+                    slidesPerView: "4",
+                },
             },
         });
 
         var productDetailsMainSwiper = new Swiper(".main-swiper", {
             slidesPerView: 1,
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: ".main-swiper-control-next",
+                prevEl: ".main-swiper-control-prev",
+            },
+            thumbs: {
+                swiper: productDetailsSideSwiper,
             },
         });
-        productDetailsSideSwiper.params.control =
-            productDetailsMainSwiper.params.control;
-        productDetailsMainSwiper.params.control =
-            productDetailsSideSwiper.params.control;
     });
 });

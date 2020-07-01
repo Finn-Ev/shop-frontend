@@ -11,18 +11,34 @@
         border-top: lightgrey 1px solid;
         border-bottom: lightgrey 1px solid;
         padding: 10px 0;
-        .col-18 {
+        .col-20 {
             margin: 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-size: 0.9rem;
+            @include media-breakpoint-down(md) {
+                flex-direction: column;
+                align-items: flex-end;
+                .fa-clipboard-list {
+                    display: none;
+                }
+            }
             a {
                 font-weight: 500;
             }
         }
     }
+
     .select-type {
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+            border-bottom: 1px solid lightgrey;
+            padding-bottom: 1rem;
+            span {
+                margin-bottom: 10px;
+            }
+        }
         .dropdown-toggle {
             width: 100%;
             button {
@@ -46,15 +62,25 @@
     }
     .cart-area {
         margin-top: 2rem;
+
+        width: 100%;
+
+        .quantity {
+            text-align: center;
+            width: auto;
+            max-width: 60px;
+            height: 100%;
+        }
         .add-to-cart {
             padding: 15px 7.5px;
             background: #e75862;
             color: white;
         }
     }
-    .good-to-know {
-        width: 100%;
 
+    .good-to-know {
+        display: flex;
+        flex-wrap: wrap;
         margin-bottom: 2rem;
         span {
             margin-top: 10px;
@@ -70,10 +96,13 @@
         border-top: 1px solid lightgrey;
         border-bottom: 1px solid lightgrey;
         padding: 12.5px 0;
-
+        align-items: center;
         span {
             font-family: $Lato;
             margin-right: 2rem;
+            @include media-breakpoint-down(md) {
+                display: block;
+            }
         }
     }
 }

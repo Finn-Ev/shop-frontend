@@ -8,3 +8,10 @@ $border-radius: 0;
 $Lato: "Lato", sans-serif;
 $Oswald: "Oswald", sans-serif;
 $Merriweather: "Merriweather Sans", sans-serif;
+
+$container-max-widths: (
+    sm: 600px,
+    md: 900px,
+    lg: 1014px,
+    xl: 1420px,
+);
