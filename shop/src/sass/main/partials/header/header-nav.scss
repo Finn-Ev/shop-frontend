@@ -1,4 +1,7 @@
 .header-nav {
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
     background-color: #1c1c1b;
     color: white;
     position: relative;

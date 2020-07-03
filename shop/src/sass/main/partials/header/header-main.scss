@@ -2,16 +2,26 @@
     margin: 20px 0;
     display: flex;
     align-items: center;
+    @include media-breakpoint-down(lg) {
+        flex-wrap: wrap;
+    }
 
     .searchbar {
-        width: 100%;
         margin: 0 2.5rem;
+        width: 100%;
         padding: 5px;
         padding-left: 10px;
         border: lightgrey 1px solid;
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
     }
     .certificates {
         display: flex;
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
         img {
             margin-right: 3px;
         }
@@ -20,6 +30,15 @@
         display: flex;
         justify-content: space-between;
         margin-left: 2rem;
+        @include media-breakpoint-down(lg) {
+            margin-top: 1.5rem;
+            justify-content: space-around;
+            width: 100%;
+            margin-left: 0;
+            a {
+                display: block;
+            }
+        }
         div {
             text-align: center;
             i {

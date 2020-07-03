@@ -1,13 +1,14 @@
 //import files from partials
-@import "./partials/header/header-top.scss";
-@import "./partials/header/header-main.scss";
-@import "./partials/header/header-nav.scss";
+@import "./partials/header/header-top";
+@import "./partials/header/header-main";
+@import "./partials/header/header-nav";
+@import "./partials/header/mobile-menu";
 
-@import "./partials/product-list/category-header.scss";
+@import "./partials/product-list/category-header";
 @import "./partials/product-list/filter-header";
 @import "./partials/product-list/filter-options";
 @import "./partials/product-list/product";
-@import "./partials/product-list/newsletter-tile.scss";
+@import "./partials/product-list/newsletter-tile";
 @import "./partials/product-list/swiper.config";
 
 @import "./partials/product-details/product-details";

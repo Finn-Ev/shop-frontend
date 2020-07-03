@@ -11,6 +11,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include media-breakpoint-down(lg) {
+        align-items: center;
+        .category-name {
+            color: white;
+            margin-left: 0 !important;
+        }
+    }
 
     .my-breadcrumb,
     .category-name {

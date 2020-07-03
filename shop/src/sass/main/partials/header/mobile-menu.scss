@@ -1,0 +1,22 @@
+.mobile-menu-toggle {
+    margin-right: 1rem;
+}
+
+.fas.fa-search {
+    margin-left: 1rem;
+}
+
+.mobile-menu-toggle,
+.fas.fa-search {
+    font-size: 2rem;
+    @include media-breakpoint-up(xl) {
+        display: none;
+    }
+}
+
+.navbar-close {
+    color: black;
+    text-align: start;
+    margin-left: 5px;
+    font-size: 1.5rem;
+}
