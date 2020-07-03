@@ -1,0 +1,50 @@
+.header-main {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+
+    .searchbar {
+        width: 100%;
+        margin: 0 2.5rem;
+        padding: 5px;
+        padding-left: 10px;
+        border: lightgrey 1px solid;
+    }
+    .certificates {
+        display: flex;
+        img {
+            margin-right: 3px;
+        }
+    }
+    .basic-navigation {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 2rem;
+        div {
+            text-align: center;
+            i {
+                font-size: 1.5rem;
+            }
+            a {
+                font-family: $Oswald;
+                margin: 0 10px;
+            }
+            .fa-shopping-cart {
+                position: relative;
+                &::after {
+                    content: "12";
+                    position: absolute;
+                    background: red;
+                    color: white;
+                    top: -7.5px;
+                    right: -7.5px;
+                    font-size: 10px;
+                    font-weight: 300;
+                    padding: 2px;
+                    border-radius: 50%;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+            }
+        }
+    }
+}

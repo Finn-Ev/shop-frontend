@@ -35,15 +35,16 @@
             flex-direction: column;
             border-bottom: 1px solid lightgrey;
             padding-bottom: 1rem;
+            .row {
+                justify-content: center;
+                text-align: center;
+            }
             span {
                 margin-bottom: 10px;
             }
         }
         .dropdown-toggle {
             width: 100%;
-            button {
-                margin: 0;
-            }
         }
     }
     .price-area {
@@ -66,7 +67,6 @@
         width: 100%;
 
         .quantity {
-            text-align: center;
             width: auto;
             max-width: 60px;
             height: 100%;
@@ -79,15 +79,11 @@
     }
 
     .good-to-know {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 2rem;
-        span {
-            margin-top: 10px;
-            font-family: $Lato;
-        }
-        .fa-check {
-            color: rgb(189, 12, 12);
+        columns: 1;
+        font-family: $Lato;
+        margin-bottom: 1rem;
+        @include media-breakpoint-up(lg) {
+            columns: 2;
         }
     }
     .others {
@@ -104,5 +100,31 @@
                 display: block;
             }
         }
+    }
+}
+
+.check {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        height: 50%;
+        width: 3px;
+        background: red;
+        transform: rotate(-45deg);
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        height: 3px;
+        width: 100%;
+        background: red;
+        transform: translateX(1px) translateY(-3px) rotate(-45deg);
     }
 }

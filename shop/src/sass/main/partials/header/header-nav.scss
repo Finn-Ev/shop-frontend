@@ -1,0 +1,78 @@
+.header-nav {
+    background-color: #1c1c1b;
+    color: white;
+    position: relative;
+
+    .nav-links {
+        list-style: none;
+        justify-content: space-between;
+        display: flex;
+        padding: 0 2rem;
+        .nav-item {
+            &:hover {
+                .sub-categories {
+                    opacity: 1;
+                    visibility: inherit;
+                    transition: opacity 0.5s ease;
+                }
+            }
+            .main-category {
+                position: relative;
+                padding: 20px 10px;
+                text-align: center;
+                a {
+                    color: white;
+                    font-family: $Lato;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    &:after {
+                        content: "";
+                        left: 0;
+                        bottom: 0;
+                        position: absolute;
+                        background-color: #e30514;
+                        height: 5px;
+                        width: 100%;
+                    }
+                    > a {
+                        text-decoration: none;
+                        color: #e30514;
+                    }
+                }
+            }
+
+            .sub-categories {
+                background: white;
+                width: 100%;
+                color: #1c1c1b;
+                z-index: 5;
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                top: calc(100%);
+                left: 0;
+                padding: 0 2rem;
+                border-bottom: 2px solid lightgray;
+
+                .sub-category {
+                    margin: 1.5rem 0;
+                    padding: 0 1rem;
+                    border-right: 1px solid lightgrey;
+                    font-family: $Lato;
+
+                    .sub-category-name {
+                        font-weight: 600;
+                    }
+
+                    .sub-category-links {
+                        list-style: none;
+                        padding-left: 0;
+                        font-family: $Lato;
+                    }
+                }
+            }
+        }
+    }
+}

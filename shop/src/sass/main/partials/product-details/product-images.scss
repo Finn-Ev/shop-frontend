@@ -14,7 +14,6 @@
 
 .side-swiper,
 .main-swiper {
-    height: 400px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -89,12 +88,30 @@
     top: calc(50% - 2rem);
 }
 
-.badge {
+.badge-container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    background: rgb(53, 175, 216);
     bottom: 10px;
-    z-index: 2;
+    z-index: 1;
+}
+
+.badge {
     color: white;
     font-size: 1.25rem;
     padding: 10px;
+    width: fit-content;
+}
+
+.badge-blue {
+    background: rgb(53, 175, 216);
+}
+
+.badge-red {
+    background: rgb(212, 15, 15);
+}
+
+.badge-green {
+    background: rgb(37, 143, 37);
 }

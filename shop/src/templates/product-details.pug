@@ -5,7 +5,7 @@ block title
 
 block content
     .container
-        .row.mt-5
+        .row.mt-5.justify-content-between
             .col-24.col-md-12
                 .row.product-images
                     .col-24.col-sm-4.col-md-24.col-lg-4
@@ -30,23 +30,26 @@ block content
                         .main-swiper 
                             .swiper-wrapper
                                 .swiper-slide
-                                    img.w-100(src="images/detail-page-1.jpg", alt="")
+                                    img.main-swiper-image.w-100(src="images/detail-page-1.jpg", alt="")
                                 .swiper-slide
                                     img.w-100(src="images/detail-page-2.png", alt="")
                                 .swiper-slide
-                                    img.w-100(src="images/detail-page-3.png", alt="")
+                                    img.main-swiper-image.w-100(src="images/detail-page-3.png", alt="")
                                 .swiper-slide
-                                    img.w-100(src="images/detail-page-1.jpg", alt="")
+                                    img.main-swiper-image.w-100(src="images/detail-page-1.jpg", alt="")
                                 .swiper-slide
-                                    img.w-100(src="images/detail-page-2.png", alt="")
+                                    img.main-swiper-image.w-100(src="images/detail-page-2.png", alt="")
                                 .swiper-slide
-                                    img.w-100(src="images/detail-page-3.png", alt="")
+                                    img.main-swiper-image.w-100(src="images/detail-page-3.png", alt="")
             
                         i.fas.fa-arrow-left.main-swiper-control-prev.swiper-control 
                         i.fas.fa-arrow-right.main-swiper-control-next.swiper-control
-                        .badge NEU  
+                        ul.badge-container
+                            li.badge.badge-blue NEU  
+                            li.badge.badge-red SALE
+                            li.badge.badge-green LIEFERBAR    
                 
-            .col-24.col-md-12.product-details.px-5.px-md-3
+            .col-24.col-md-10.product-details.px-md-3
                 h4.product-name.mb-3 Kesseböhmer LeMans II Eckschrank Beschlag anthrazit 450, 500 oder 600 mm Links / Rechts
                 
                 .quick-links
@@ -60,8 +63,8 @@ block content
 
                 .select-type.mt-4
                     .row
-                        span.col-4 Ausführung
-                        .dropdown.col-20
+                        span.col-24.col-md-4 Ausführung
+                        .dropdown.col-24.col-md-20
                             button.btn.btn-light.dropdown-toggle(type="button", id="dropdownMenuButton", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Bitte Auswählen
                             .dropdown-menu(aria-labelledby="dropdownMenuButton")
                                 a.dropdown-item(href="/") test
@@ -77,17 +80,16 @@ block content
                 
                 .cart-area
                     .row
-                        .col-2
-                            input.quantity(type="number", placeholder="1", min="1") 
-                        .col-20.offset-2
+                        .col-4
+                            input.quantity(type="number", placeholder=" 1", min="1") 
+                        .col-20
                             <button class="btn add-to-cart btn-block"> <i class="fas fa-shopping-cart"></i>&nbsp;In den Warenkorb  </button>
                 
-                .good-to-know.mt-4
-                   
-                    <span class="col-10" style="padding: 0"> <i class="fas fa-check"></i>&nbsp;&nbsp; Versandkostenfrei ab 50€</span>
-                    <span class="col-10" style="padding: 0"> <i class="fas fa-check"></i>&nbsp;&nbsp; Sicherer Bestellprozess (SSL)</span>
-                    <span class="col-10" style="padding: 0"> <i class="fas fa-check"></i>&nbsp;&nbsp; Kostenlose Fachberatung</span>
-                    <span class="col-10" style="padding: 0"> <i class="fas fa-check"></i>&nbsp;&nbsp; Trusted Shops zertifiziert</span>
+                .good-to-know.mt-5
+                    <div> <span class="check"></span></i> Versandkostenfrei ab 50€</div> <br>
+                    <div> <span class="check"></span></i> Sicherer Bestellprozess (SSL)</div> <br>
+                    <div> <span class="check"></span></i> Kostenlose Fachberatung</div> <br>
+                    <div> <span class="check"></span></i> Trusted Shops zertifiziert</div> <br>
 
                 .others
                     .product-ids
@@ -95,6 +97,7 @@ block content
                         span Angebots-Nr.: 60826106
                     i.fas.fa-share
 
+       
                 
 
 

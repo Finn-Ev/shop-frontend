@@ -1,5 +1,6 @@
-require(["jquery", "matchHeight"], function ($, matchHeight) {
-    $(function () {
+require(["jquery", "matchHeight"], function ($) {
+    $(() => {
         $(".product-name ").matchHeight();
+        $(".sub-category").matchHeight();
     });
 });
